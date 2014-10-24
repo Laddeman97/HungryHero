@@ -30,7 +30,7 @@ package
 		public static const AtlasTextureGame:Class;
 		
 		[Embed(source="../media/graphics/mySpritesheet.xml",mimeType="application/octet-stream")]
-		public static function AtlasXmlGame:Class;
+		public static const AtlasXmlGame:Class;
 		
 		public static function getAtlas():TextureAtlas
 		{
@@ -40,6 +40,7 @@ package
 				var xml:XML = XML(new AtlasXmlGame());
 				gameTextureAtlas = new TextureAtlas(texture, xml);
 			}
+			return gameTextureAtlas;
 		}
 		
 		
