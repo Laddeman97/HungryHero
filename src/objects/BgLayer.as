@@ -6,10 +6,10 @@ package objects
 	
 	public class BgLayer extends Sprite
 	{
-		private var image1:Image
-		private var image2:Image
+		private var image1:Image;
+		private var image2:Image;
 		
-		private var _layer:int
+		private var _layer:int;
 		private var _parallax:Number;
 		
 		public function BgLayer(layer:int)
@@ -31,8 +31,8 @@ package objects
 			}
 			else
 			{
-				image1 = new Image(Assets.getTexture("BgLayer" + _layer));
-				image2 = new Image(Assets.getTexture("BgLayer" + _layer));
+				image1 = new Image(Assets.getAtlas().getTexture("bgLayer" + _layer));
+				image2 = new Image(Assets.getAtlas().getTexture("bgLayer" + _layer));
 			}
 			
 			image1.x = 0;
