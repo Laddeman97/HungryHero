@@ -48,7 +48,7 @@ package screens
 			this.addChild(hero);
 			
 			startButton = new Button(Assets.getAtlas().getTexture("startButton"));
-			startButton.x = stage.stageWidth * 0.5 - startButton.width *0.5;
+			startButton.x = stage.stageWidth * 0.5 - startButton.width * 0.5;
 			startButton.y = stage.stageHeight * 0.5 - startButton.height * 0.5;
 			this.addChild(startButton);
 		}
@@ -76,13 +76,15 @@ package screens
 			
 			startButton.addEventListener(Event.TRIGGERED, onStartButtonClick);
 			
-			launchHero();
+			
 		}
 		
 		private function onStartButtonClick(event:Event):void
 		{
 			startButton.visible = false;
 			startButton.removeEventListener(Event.TRIGGERED, onStartButtonClick);
+			
+			launchHero();
 		}
 		
 		private function launchHero():void
