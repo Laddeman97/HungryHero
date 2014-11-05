@@ -60,13 +60,13 @@ package screens
 			this.removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 			drawGame();
 			
-			scoreText = new TextField(300, 100, "Score: 0", Assets.getFont().name, 24, 0xffffff)
-			scoreText.hAlign = HAlign.LEFT;
-			scoreText.vAlign = VAlign.TOP;	
+			scoreText = new TextField(300, 100, "Score: 0", "MyFontName", 24, 0xffffff)
+			scoreText.hAlign = HAlign.CENTER;
+			scoreText.vAlign = VAlign.TOP;
 			scoreText.x = 20;
 			scoreText.y = 20;
-			scoreText.border = true;
 			scoreText.height = scoreText.textBounds.height + 10;
+			
 			this.addChild(scoreText);
 		}
 		
@@ -171,15 +171,15 @@ package screens
 							hero.rotation = deg2rad(-(hero.y - touchY) * 0.2);
 						}
 						
-						if (hero.y > gameArea.bottom - hero.height * 0.5)
+						if (hero.y > gameArea.bottom - hero.height * 0.1)
 						{
-							hero.y = gameArea.bottom - hero.height * 0.5;
-							hero.rotation = deg2rad(0);
+							hero.y = gameArea.bottom - hero.height * 0.1;
+							hero.rotation = deg2rad(0)
 						}
 						if (hero.y < gameArea.top + hero.height * 0.5)
 						{
-							hero.y = gameArea.top + hero.height * 0.5;
-							hero.rotation = deg2rad(0);
+							hero.y = gameArea.top + hero.height * 0.2;
+							hero.rotation = deg2rad(0)
 						}
 					}
 					else

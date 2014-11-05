@@ -27,10 +27,10 @@ package
 		[Embed(source="../media/graphics/mySpritesheet.xml",mimeType="application/octet-stream")]
 		public static const AtlasXmlGame:Class;
 		
-		[Embed(source="../media/fonts/fontScoreValue.png")]
+		[Embed(source="../media/fonts/fontRegular.png")]
 		public static const FontTexture:Class;
 		
-		[Embed(source="../media/fonts/fontScoreLabel.fnt",mimeType="application/octet-stream")]
+		[Embed(source="../media/fonts/fontRegular.fnt",mimeType="application/octet-stream")]
 		public static const FontXML:Class;
 		
 		public static var myFont:BitmapFont;
